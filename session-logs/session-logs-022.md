@@ -128,5 +128,5 @@ The confidence ratings (19%–37%) are consistently moderate, and the IPs are al
 
 ---
 
-*Day 23 of 30 — 30‑Day Tier 1 SOC Analyst Lab Challenge*
+*Day 22 of 30 — 30‑Day Tier 1 SOC Analyst Lab Challenge*
 *Repository: [Windows11-Analyst-Lab](https://github.com/RreMatlabe/Windows11-Analyst-Lab)*
