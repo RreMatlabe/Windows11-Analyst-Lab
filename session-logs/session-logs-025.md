@@ -135,5 +135,5 @@ In Day 24, `mmc.exe` launching Event Viewer ran at **High integrity**. In this s
 
 ---
 
-*Day 26 of 30 — 30‑Day Tier 1 SOC Analyst Lab Challenge*
+*Day 25 of 30 — 30‑Day Tier 1 SOC Analyst Lab Challenge*
 *Repository: [Windows11-Analyst-Lab](https://github.com/RreMatlabe/Windows11-Analyst-Lab)*
