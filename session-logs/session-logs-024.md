@@ -55,7 +55,7 @@ Conduct structured analysis of Sysmon event logs to verify log structure and eve
 - Sigma Rules: NOT FOUND
 - Bundled files: 11 components (.rsrc/MUI, .rsrc/MANIFEST, fothk, .pdata, .data, .didat, CERTIFICATE, .text, .rdata, .reloc)
 
-> **Note:** "File distributed by Microsoft" banner present — highest legitimacy confidence tier. Consistent result across Days 3, 7, 9, 10, 18, 19, 21, 23, and now 24 — same SHA256, same Microsoft distribution designation, same 2 MEDIUM, 3 LOW, 4 INFO MITRE signature profile. The binary has now been verified across multiple sessions with identical results, establishing a strong baseline. The 2 MEDIUM MITRE signatures warrant ongoing awareness but are not actionable on a repeatedly confirmed Microsoft‑distributed file. Escalation trigger: detection score increases or MEDIUM signatures appear alongside anomalous process behaviour or unexpected network activity.
+> **Note:** "File distributed by Microsoft" banner present — highest legitimacy confidence tier. Consistent result across Days 3, 7, 9, 10, 18, 19, 21, 22, and now 24 — same SHA256, same Microsoft distribution designation, same 2 MEDIUM, 3 LOW, 4 INFO MITRE signature profile. The binary has now been verified across multiple sessions with identical results, establishing a strong baseline. The 2 MEDIUM MITRE signatures warrant ongoing awareness but are not actionable on a repeatedly confirmed Microsoft‑distributed file. Escalation trigger: detection score increases or MEDIUM signatures appear alongside anomalous process behaviour or unexpected network activity.
 
 ---
 
