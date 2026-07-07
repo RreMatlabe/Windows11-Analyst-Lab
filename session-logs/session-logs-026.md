@@ -76,7 +76,7 @@ Based on consistent cross‑session verification and the known legitimate behavi
 ## What I Learned
 
 **1. `sdbinst.exe` has now appeared six times with identical behaviour.**
-This session marks the **sixth confirmed instance** of `sdbinst.exe` writing the `FriendlyName` value for `msimain.sdb` under the `SdbUpdates` registry key (Days 7, 9, 11, 18, 21, 22, and now 27). This establishes a very strong baseline: `sdbinst.exe` is invoked regularly during Windows maintenance windows to register MSI compatibility shims. The RuleName `Context,DeviceConnectedOrUpdated` is consistently triggered, confirming this is a known Sysmon configuration rule targeting this specific behaviour. Any deviation from this pattern (different registry path, different RuleName, or different user context) would warrant investigation.
+This session marks the **sixth confirmed instance** of `sdbinst.exe` writing the `FriendlyName` value for `msimain.sdb` under the `SdbUpdates` registry key (Days 7, 9, 11, 18, 21, 22, and now 26). This establishes a very strong baseline: `sdbinst.exe` is invoked regularly during Windows maintenance windows to register MSI compatibility shims. The RuleName `Context,DeviceConnectedOrUpdated` is consistently triggered, confirming this is a known Sysmon configuration rule targeting this specific behaviour. Any deviation from this pattern (different registry path, different RuleName, or different user context) would warrant investigation.
 
 **2. Azure IP abuse reports consistently show low-to-moderate confidence across different IPs.**
 The trend continues across sessions:
@@ -84,12 +84,12 @@ The trend continues across sessions:
 - Day 21: `52.182.143.211` — 95 reports, 19% confidence
 - Day 22: `52.182.143.213` — 94 reports, 24% confidence
 - Day 23: `20.184.175.10` — 19 reports, 37% confidence
-- Day 27: `13.89.179.14` — 103 reports, 23% confidence
+- Day 26: `13.89.179.14` — 103 reports, 23% confidence
 
 All IPs are Microsoft Azure data centre addresses, and all confidence ratings are moderate (19%–37%). This reinforces that IP reputation alone is insufficient for escalation — the process context and traffic pattern are more reliable indicators.
 
 **3. MoUsoCoreWorker.exe continues to be a stable, recurring Windows Update baseline.**
-The same SHA256 for `MoUsoCoreWorker.exe` has appeared in Days 11, 13, 15, 22, and now 27, with identical behaviour: launched by `svchost.exe -k netsvcs -p -s UsoSvc` with `useprivatenamespaces`, running at System integrity. This establishes a strong cross‑session baseline for the Update Session Orchestrator core worker.
+The same SHA256 for `MoUsoCoreWorker.exe` has appeared in Days 11, 13, 15, 22, and now 26, with identical behaviour: launched by `svchost.exe -k netsvcs -p -s UsoSvc` with `useprivatenamespaces`, running at System integrity. This establishes a strong cross‑session baseline for the Update Session Orchestrator core worker.
 
 **4. Sysmon logs occasionally contain typographical errors — raw logs are the source of truth.**
 The Sysmon log for `MoUsoCoreWorker.exe` shows the command line flag as `useprivatenameispaces` (with an extra 'i'), while the documented correct flag is `useprivatenamespaces`. This is likely a log‑time transcription artifact rather than a command line variation. However, the Sysmon log is the source of truth for what was captured — the assessment should note the discrepancy but base the legitimacy verdict on the broader context (path, parent, user, hash).
@@ -129,5 +129,5 @@ The Sysmon log for `MoUsoCoreWorker.exe` shows the command line flag as `usepriv
 
 ---
 
-*Day 27 of 30 — 30‑Day Tier 1 SOC Analyst Lab Challenge*
+*Day 26 of 30 — 30‑Day Tier 1 SOC Analyst Lab Challenge*
 *Repository: [Windows11-Analyst-Lab](https://github.com/RreMatlabe/Windows11-Analyst-Lab)*
