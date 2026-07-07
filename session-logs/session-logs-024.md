@@ -55,15 +55,15 @@ Conduct structured analysis of Sysmon event logs to verify log structure and eve
 - Sigma Rules: NOT FOUND
 - Bundled files: 11 components (.rsrc/MUI, .rsrc/MANIFEST, fothk, .pdata, .data, .didat, CERTIFICATE, .text, .rdata, .reloc)
 
-> **Note:** "File distributed by Microsoft" banner present — highest legitimacy confidence tier. Consistent result across Days 3, 7, 9, 10, 18, 19, 21, 23, and now 25 — same SHA256, same Microsoft distribution designation, same 2 MEDIUM, 3 LOW, 4 INFO MITRE signature profile. The binary has now been verified across multiple sessions with identical results, establishing a strong baseline. The 2 MEDIUM MITRE signatures warrant ongoing awareness but are not actionable on a repeatedly confirmed Microsoft‑distributed file. Escalation trigger: detection score increases or MEDIUM signatures appear alongside anomalous process behaviour or unexpected network activity.
+> **Note:** "File distributed by Microsoft" banner present — highest legitimacy confidence tier. Consistent result across Days 3, 7, 9, 10, 18, 19, 21, 23, and now 24 — same SHA256, same Microsoft distribution designation, same 2 MEDIUM, 3 LOW, 4 INFO MITRE signature profile. The binary has now been verified across multiple sessions with identical results, establishing a strong baseline. The 2 MEDIUM MITRE signatures warrant ongoing awareness but are not actionable on a repeatedly confirmed Microsoft‑distributed file. Escalation trigger: detection score increases or MEDIUM signatures appear alongside anomalous process behaviour or unexpected network activity.
 
 ---
 
 ### File 3: msedge.exe (Hash Not Verified This Session)
 
-**Note:** The Event ID 1 entry for `msedge.exe` (PID 8444) was not submitted to VirusTotal during this session. However, this process and its behaviour were confirmed as legitimate in **Day 24** with the same hash:
+**Note:** The Event ID 1 entry for `msedge.exe` (PID 8444) was not submitted to VirusTotal during this session. However, this process and its behaviour were confirmed as legitimate in **Day 23** with the same hash:
 
-- **Day 24** — `msedge.exe` — SHA256: `31740489bf55dad05f2b4bf3e400ee87a13a02336ebf89bc4f51a2ca7d9e6e0c` — 0/69 — Legitimate (version 149.0.4022.98)
+- **Day 23** — `msedge.exe` — SHA256: `31740489bf55dad05f2b4bf3e400ee87a13a02336ebf89bc4f51a2ca7d9e6e0c` — 0/69 — Legitimate (version 149.0.4022.98)
 
 Based on the confirmed legitimacy from the prior session and the same browser version, no further investigation is warranted for this session's occurrence.
 
@@ -128,5 +128,5 @@ The Edge `unzipper` utility (`--utility-sub-type=unzip.mojom.Unzipper`) runs at 
 
 ---
 
-*Day 25 of 30 — 30‑Day Tier 1 SOC Analyst Lab Challenge*
+*Day 24 of 30 — 30‑Day Tier 1 SOC Analyst Lab Challenge*
 *Repository: [Windows11-Analyst-Lab](https://github.com/RreMatlabe/Windows11-Analyst-Lab)*
