@@ -123,5 +123,5 @@ The Event ID 5 termination event for `FileCoAuth.exe` appears without an associa
 
 ---
 
-*Day 24 of 30 — 30‑Day Tier 1 SOC Analyst Lab Challenge*
+*Day 23 of 30 — 30‑Day Tier 1 SOC Analyst Lab Challenge*
 *Repository: [Windows11-Analyst-Lab](https://github.com/RreMatlabe/Windows11-Analyst-Lab)*
