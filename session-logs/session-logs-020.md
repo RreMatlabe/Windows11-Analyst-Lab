@@ -79,7 +79,7 @@ In this session, `taskhostw.exe` appeared twice: once at Medium integrity under 
 Edge updates are triggered by the Task Scheduler (`/installsource scheduler`) and run at System integrity. The `/ua` flag checks for update availability. This is a normal, expected behaviour that appears regularly when Edge is installed. Recognising this prevents false positives when `MicrosoftEdgeUpdate.exe` appears in Event ID 1 logs.
 
 **3. `sdbinst.exe` writing to `AppCompatFlags\SdbUpdates` is a recurring, predictable system maintenance event.**
-This is the **fourth confirmed instance** of `sdbinst.exe` writing the `FriendlyName` value for `msimain.sdb` under the `SdbUpdates` registry key (Days 7, 9, 11, 18, and now 21). This establishes a reliable baseline: `sdbinst.exe` is invoked during Windows maintenance windows to register MSI compatibility shims. The RuleName `Context,DeviceConnectedOrUpdated` is consistently triggered, confirming this is a known Sysmon configuration rule targeting this specific behaviour.
+This is the **fourth confirmed instance** of `sdbinst.exe` writing the `FriendlyName` value for `msimain.sdb` under the `SdbUpdates` registry key (Days 7, 9, 11, 18, and now 20). This establishes a reliable baseline: `sdbinst.exe` is invoked during Windows maintenance windows to register MSI compatibility shims. The RuleName `Context,DeviceConnectedOrUpdated` is consistently triggered, confirming this is a known Sysmon configuration rule targeting this specific behaviour.
 
 **4. Integrity level variance between taskhostw.exe instances is expected architecture.**
 Seeing `taskhostw.exe` at both System and Medium integrity in the same session is normal. The Task Scheduler runs tasks with the integrity level of the user context they are configured for. A system‑level scheduled task (e.g., Windows maintenance, update checks) will run at System integrity; a user‑profile task (e.g., scheduled app refresh, personalisation) will run at Medium integrity. This reinforces the importance of examining the full process context (parent, command line, user, integrity) rather than assuming a single integrity level is "correct."
@@ -118,5 +118,5 @@ Seeing `taskhostw.exe` at both System and Medium integrity in the same session i
 
 ---
 
-*Day 21 of 30 — 30‑Day Tier 1 SOC Analyst Lab Challenge*
+*Day 20 of 30 — 30‑Day Tier 1 SOC Analyst Lab Challenge*
 *Repository: [Windows11-Analyst-Lab](https://github.com/RreMatlabe/Windows11-Analyst-Lab)*
