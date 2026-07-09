@@ -59,14 +59,6 @@ Conduct structured analysis of Sysmon event logs to verify log structure and eve
 
 ---
 
-### File 3: OneDrive.exe (Hash Not Verified This Session)
-
-**Note:** The Event ID 3 connection for `OneDrive.exe` on 2026-06-23 uses the same SHA256 hash as Day 15 (`OneDrive.Sync.Service.exe`). Since the hash was already verified as 0/68 in that session with a legitimate Microsoft verdict, re‑verification was not required for this log. Cross‑reference:
-
-- **Day 15 File 3:** `OneDrive.Sync.Service.exe` — SHA256: `3c9b5c7e8f2d...` — 0/68 — Legitimate
-
----
-
 ## What I Learned
 
 **1. `lfsvc` stands for Logical Location Framework Service—the Windows Geolocation Service.**
@@ -106,7 +98,6 @@ Without this context, a less experienced analyst might escalate a benign optimis
 
 - *The `stun.cloudflare.com` DNS query appeared in both Day 16 and Day 17 logs with different PIDs (7768 vs 7268).* Does this represent two separate Edge instances/processes making WebRTC queries, or is this the same background Edge process re‑querying at different times? Correlation of DNS queries to specific browser tabs or extensions would require additional logging.
 
-- *The `OneDrive.exe` image path in the Event ID 3 screenshot shows `OneDrive.exe` from the base directory, not `OneDrive.Sync.Service.exe` from the versioned subdirectory.* What determines whether the main `OneDrive.exe` client versus the `OneDrive.Sync.Service.exe` engine handles outbound sync connections?
 
 ---
 
