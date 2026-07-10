@@ -68,8 +68,8 @@ Conduct structured analysis of Sysmon event logs to verify log structure and eve
 - **Day 12** — `sdbinst.exe` with same registry path — 0/68 — Legitimate
 - **Day 14** — `sdbinst.exe` with same registry path — 0/68 — Legitimate
 - **Day 18** — `sdbinst.exe` with same registry path — 0/68 — Legitimate
+- **Day 20** — `sdbinst.exe` with same registry path — 0/68 — Legitimate
 - **Day 21** — `sdbinst.exe` with same registry path — 0/68 — Legitimate
-- **Day 22** — `sdbinst.exe` with same registry path — 0/68 — Legitimate
 
 Based on consistent cross‑session verification and the known legitimate behaviour of `sdbinst.exe` for compatibility shim updates, no further investigation is warranted for this session's occurrence.
 
