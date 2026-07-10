@@ -65,6 +65,8 @@ Conduct structured analysis of Sysmon event logs to verify log structure and eve
 - **Day 7** — `sdbinst.exe` writing `FriendlyName` for `msimain.sdb` — 0/68 — Legitimate
 - **Day 9** — `sdbinst.exe` with RuleName `Context,DeviceConnectedOrUpdated` — 0/68 — Legitimate
 - **Day 11** — `sdbinst.exe` with same registry path — 0/68 — Legitimate
+- **Day 12** — `sdbinst.exe` with same registry path — 0/68 — Legitimate
+- **Day 14** — `sdbinst.exe` with same registry path — 0/68 — Legitimate
 - **Day 18** — `sdbinst.exe` with same registry path — 0/68 — Legitimate
 - **Day 21** — `sdbinst.exe` with same registry path — 0/68 — Legitimate
 - **Day 22** — `sdbinst.exe` with same registry path — 0/68 — Legitimate
